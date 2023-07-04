@@ -1,25 +1,21 @@
 {
-  "name": "media-ant-analytics",
-  "version": "1.0.0",
-  "description": "Graph ql api for Campaign Analytics ",
-  "main": "index.js",
+  "name": "tma-analytics-api",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx tsc",
+    "start": "node dist/index.js",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/prajwal183/media-ant-analytics-graphql.git"
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.3.3",
+    "concurrently": "^8.2.0",
+    "nodemon": "^2.0.22",
+    "typescript": "^5.1.6"
   },
-  "keywords": [
-    "analytics",
-    "campaigns",
-    "graphql",
-    "postgres"
-  ],
-  "author": "Prajwal",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/prajwal183/media-ant-analytics-graphql/issues"
-  },
-  "homepage": "https://github.com/prajwal183/media-ant-analytics-graphql#readme"
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  }
 }
